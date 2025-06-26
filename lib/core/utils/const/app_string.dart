@@ -4,14 +4,17 @@ class AppStrings {
   static const String mangeAndSchedule =
       'Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.';
   static const String getStartedButtonTitle = "Get Started";
+  static const String welcomeBackTitle = "Welcome Back";
+  static const String weAreExitedTitle =
+      "We're excited to have you back, can't wait to see\n what you've been up to since you last\n logged in.";
   static const String passwordAppBarTitle = "Password";
   static const String loginTitle = "Login";
   static const String confirmTitle = "Confirm";
-  static const String signUpTitle = "Sign up";
+  static const String signUpTitle = "Sign Up";
   static const String forgetPasswordText = 'Forget password?';
   static const String alreadyHaveAccount = 'Already have an Account?';
 
-  static const String forgetPasswordScreenTitle = 'Forget Password';
+  static const String forgetPasswordTitle = 'Forget Password?';
   static const String forgetPasswordScreenDescription =
       'Please enter your email associated to\n your account';
 
@@ -23,7 +26,7 @@ class AppStrings {
   static const String resetPasswordScreenDescription =
       'Password must not be empty and must contain \n 6 characters with upper case letter and one \nnumber at least';
 
-  static const String donotHaveAccountText = "Don't have an account?";
+  static const String donotHaveAccountText = 'Don\'t have an account?';
   static const String didnotReceiveCode = "Didn't receive code?";
   static const String resendText = "Resend";
 
@@ -92,6 +95,10 @@ class AppStrings {
       'User profile edited successfully';
 
   static const String currentPassword = 'Current password';
+  static const String bylogging = 'By logging, you agree to our';
+  static const String tearmsAndConditions = ' Terms & Conditions';
+  static const String privacyPolicy = ' Privacy Policy';
+  static const String and = ' and';
 
   static RegExp emailRegex = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
 }
