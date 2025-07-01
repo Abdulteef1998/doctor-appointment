@@ -1,6 +1,5 @@
 import 'package:doctor_appotmnet/core/helper/app_regex.dart';
 import 'package:doctor_appotmnet/core/helper/spacing.dart';
-import 'package:doctor_appotmnet/core/utils/const/app_string.dart';
 import 'package:doctor_appotmnet/core/widgets/app_text_form_field.dart';
 import 'package:doctor_appotmnet/features/login/logic/cubit/login_cubit.dart';
 import 'package:doctor_appotmnet/features/login/ui/widgets/password_validations.dart';
@@ -53,12 +52,12 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
       child: Column(
         children: [
           AppTextFormField(
-            hintText: AppStrings.emailHintText,
+            hintText: 'Email',
             validator: (value) {
               if (value == null ||
                   value.isEmpty ||
                   !AppRegex.isEmailValid(value)) {
-                return AppStrings.validateEmailAddress;
+                return 'Please enter a valid email';
               }
             },
             controller: context.read<LoginCubit>().emailController,
@@ -66,7 +65,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
           verticalSpace(18),
           AppTextFormField(
             controller: context.read<LoginCubit>().passwordController,
-            hintText: AppStrings.passwordHintText,
+            hintText: 'Password',
             isObscureText: isObscureText,
             suffixIcon: GestureDetector(
               onTap: () {
@@ -80,7 +79,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
             ),
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return AppStrings.validatePassword;
+                return 'Please enter a valid password';
               }
             },
           ),
