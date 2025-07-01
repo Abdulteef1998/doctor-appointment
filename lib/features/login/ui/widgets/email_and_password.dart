@@ -1,5 +1,6 @@
 import 'package:doctor_appotmnet/core/helper/app_regex.dart';
 import 'package:doctor_appotmnet/core/helper/spacing.dart';
+import 'package:doctor_appotmnet/core/utils/const/app_string.dart';
 import 'package:doctor_appotmnet/core/widgets/app_text_form_field.dart';
 import 'package:doctor_appotmnet/features/login/logic/cubit/login_cubit.dart';
 import 'package:doctor_appotmnet/features/login/ui/widgets/password_validations.dart';
@@ -52,7 +53,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
       child: Column(
         children: [
           AppTextFormField(
-            hintText: 'Email',
+            hintText: AppStrings.emailHintText,
             validator: (value) {
               if (value == null ||
                   value.isEmpty ||
@@ -65,7 +66,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
           verticalSpace(18),
           AppTextFormField(
             controller: context.read<LoginCubit>().passwordController,
-            hintText: 'Password',
+            hintText: AppStrings.passwordHintText,
             isObscureText: isObscureText,
             suffixIcon: GestureDetector(
               onTap: () {
