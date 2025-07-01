@@ -44,14 +44,7 @@ class AppStrings {
   static const String confirmPasswordLabelText = 'Confirm password';
 
   static const String emptyEmailAddress = "Please enter your email address";
-  static const String validateEmailAddress = "Please enter a valid  email";
-  static const String validatePassword = "Please enter a valid  password";
-
-  static const String hasLowerCase = "At least 1 lowercase letter";
-  static const String hasUpperCase = "At least 1 uppercase letter";
-  static const String hasSpecialCharacters = "At least 1 special character";
-  static const String hasNumber = "At least 1 number";
-  static const String hasMinLength = "At least 8 characters long";
+  static const String validateEmailAddress = "This email is not valid";
 
   static const String emptyPassword = 'Please enter your password';
   static const String emptyConfirmPassword =

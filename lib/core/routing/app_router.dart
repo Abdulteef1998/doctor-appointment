@@ -1,11 +1,7 @@
-import 'package:doctor_appotmnet/core/di/dependency_injection.dart';
 import 'package:doctor_appotmnet/core/routing/routes.dart';
-import 'package:doctor_appotmnet/features/home/ui/home_screen.dart';
-import 'package:doctor_appotmnet/features/login/logic/cubit/login_cubit.dart';
 import 'package:doctor_appotmnet/features/login/ui/login_screen.dart';
 import 'package:doctor_appotmnet/features/onboarding/onboarding_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
@@ -16,12 +12,7 @@ class AppRouter {
       case Routes.onBoardingScreen:
         return MaterialPageRoute(builder: (_) => const OnboardingScreen());
       case Routes.loginScreen:
-        return MaterialPageRoute(
-          builder: (_) => BlocProvider(
-            create: (context) => getIt<LoginCubit>(),
-            child: LoginScreen(),
-          ),
-        );
+        return MaterialPageRoute(builder: (_) => LoginScreen());
 
       // case Routes.signUpScreen:
       //   return MaterialPageRoute(
@@ -30,16 +21,15 @@ class AppRouter {
       //       child: const SignupScreen(),
       //     ),
       //   );
-      case Routes.homeScreen:
-        return MaterialPageRoute(builder: (_) => HomeScreen());
-
+      // case Routes.homeScreen:
+      //   return MaterialPageRoute(
+      //     builder: (_) => BlocProvider(
+      //       create: (context) => HomeCubit(getIt())..getSpecializations(),
+      //       child: const HomeScreen(),
+      //     ),
+      //   );
       default:
         return null;
     }
   }
 }
-
-
-// (_) => BlocProvider(
-//             create: (context) => HomeCubit(getIt())..getSpecializations(),
-//             child: const
