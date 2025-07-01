@@ -58,7 +58,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
               if (value == null ||
                   value.isEmpty ||
                   !AppRegex.isEmailValid(value)) {
-                return 'Please enter a valid email';
+                return AppStrings.validateEmailAddress;
               }
             },
             controller: context.read<LoginCubit>().emailController,
@@ -80,7 +80,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
             ),
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter a valid password';
+                return AppStrings.validatePassword;
               }
             },
           ),
