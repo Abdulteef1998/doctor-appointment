@@ -12,7 +12,7 @@ class AppStrings {
   static const String confirmTitle = "Confirm";
   static const String signUpTitle = "Sign Up";
   static const String forgetPasswordText = 'Forget password?';
-  static const String alreadyHaveAccount = 'Already have an Account?';
+  static const String alreadyHaveAccount = 'Already have an account?';
 
   static const String forgetPasswordTitle = 'Forget Password?';
   static const String forgetPasswordScreenDescription =
@@ -65,6 +65,9 @@ class AppStrings {
   static const String lastNameLabelText = "Last name";
   static const String phoneHintText = "Enter phone number";
   static const String phoneLabelText = "Phone number";
+  static const String createAccount = "Create Account";
+  static const String signUpNowAnd =
+      "Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!";
 
   static const String emptyUserName = 'Please enter your user name';
   static const String emptyFirstName = 'Please enter your frist name';
@@ -83,6 +86,9 @@ class AppStrings {
 
   static const String userLoggedInSuccessfully = 'User Logged In Successfully';
   static const String userCreatedSuccessfully = 'User Created Successfully';
+  static const String signupSuccessfully = 'Signup Successful';
+  static const String congratulationssignupSuccessfully =
+      'Congratulations, you have signed up successfully!';
   static const String forgetPasswordSuccessMessage =
       "Check your email please, we will send to you a verification code in 60s.";
   static const String emailVerificationSuccessMessage =

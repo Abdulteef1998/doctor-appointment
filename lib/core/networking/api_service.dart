@@ -2,6 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:doctor_appotmnet/core/networking/api_constant.dart';
 import 'package:doctor_appotmnet/features/login/data/models/login_requset_body.dart';
 import 'package:doctor_appotmnet/features/login/data/models/login_response.dart';
+import 'package:doctor_appotmnet/features/signup/data/models/sign_up_request_body.dart';
+import 'package:doctor_appotmnet/features/signup/data/models/sign_up_response.dart';
 import 'package:retrofit/error_logger.dart';
 import 'package:retrofit/http.dart';
 
@@ -12,4 +14,6 @@ abstract class ApiService {
   factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
   @POST(ApiConstant.login)
   Future<LoginResponse> logIn(@Body() LoginRequsetBody loginRequsetBody);
+  @POST(ApiConstant.signup)
+  Future<SignupResponse> signUp(@Body() SignupRequestBody signupRequestBody);
 }
