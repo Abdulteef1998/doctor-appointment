@@ -2,6 +2,7 @@ import 'package:doctor_appotmnet/core/helper/extensions.dart';
 import 'package:doctor_appotmnet/core/routing/routes.dart';
 import 'package:doctor_appotmnet/core/theming/colors.dart';
 import 'package:doctor_appotmnet/core/theming/styles.dart';
+import 'package:doctor_appotmnet/core/utils/const/app_string.dart';
 import 'package:doctor_appotmnet/features/login/logic/cubit/login_cubit.dart';
 import 'package:doctor_appotmnet/features/login/logic/cubit/login_state.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +51,10 @@ class LoginBlocListener extends StatelessWidget {
             onPressed: () {
               context.pop();
             },
-            child: Text('Got it', style: TextStyles.font14BlueSemiBold),
+            child: Text(
+              AppStrings.gotitText,
+              style: TextStyles.font14BlueSemiBold,
+            ),
           ),
         ],
       ),
