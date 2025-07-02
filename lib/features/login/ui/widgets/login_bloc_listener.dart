@@ -52,6 +52,10 @@ class LoginBlocListener extends StatelessWidget {
               AppStrings.gotitText,
               style: TextStyles.font14BlueSemiBold,
             ),
+            child: Text(
+              AppStrings.gotitText,
+              style: TextStyles.font14BlueSemiBold,
+            ),
           ),
         ],
       ),

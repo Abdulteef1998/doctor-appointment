@@ -68,6 +68,7 @@ class AppStrings {
   static const String invalidCode = 'Invalid code';
 
   static const String continueText = "Continue";
+  static const String gotitText = "Got it";
 
   static const String loadingText = "Loading..";
   static const String somethingWentWrong = "Somthing went wrong";
