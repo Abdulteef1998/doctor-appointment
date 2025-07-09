@@ -1,7 +1,12 @@
 plugins {
     id("com.android.application")
+
+    // FlutterFire Configuration plugin
+    id("com.google.gms.google-services")
+
     id("kotlin-android")
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+
+    // Flutter Gradle Plugin (must be last)
     id("dev.flutter.flutter-gradle-plugin")
 }
 
@@ -27,8 +32,10 @@ android {
         versionName = flutter.versionName
     }
 
-    flavorDimensions += "default"
+    // تحديد أبعاد الـ flavors
+    flavorDimensions.add("default")
 
+    // تعريف الـ flavors
     productFlavors {
         create("production") {
             dimension = "default"
@@ -44,7 +51,8 @@ android {
 
     buildTypes {
         getByName("release") {
-            signingConfig = signingConfigs.getByName("debug") // يمكنك تغييره لاحقًا للتوقيع الحقيقي
+            // يمكنك لاحقًا إعداد signingConfig الحقيقي هنا
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
 }
