@@ -6,6 +6,7 @@ class AppAssets {
       'assets/svg/doc_logo_low_upacty1.svg';
 
   // home
+  static const String notificationAppBar = 'assets/svg/notifications.svg';
 
   // account
   static const String profilePhoto = 'assets/images/tarek.jpeg';
