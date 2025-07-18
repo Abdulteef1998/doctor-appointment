@@ -7,6 +7,8 @@ class AppAssets {
 
   // home
   static const String notificationAppBar = 'assets/svg/notifications.svg';
+  static const String blueContaner = 'assets/images/home_blue_pattern.png';
+  static const String doctorPhoto = 'assets/images/omar.png';
 
   // account
   static const String profilePhoto = 'assets/images/tarek.jpeg';
