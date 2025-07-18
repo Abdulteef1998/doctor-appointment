@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "744122256551",
+    "project_id": "doctor-appot-distribution",
+    "storage_bucket": "doctor-appot-distribution.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744122256551:android:7171011ce08dbe76431f82",
+        "android_client_info": {
+          "package_name": "com.example.doctor_appotmnet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAp8V1URIoI4tGS_DZuN36fVDX35KmlY1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744122256551:android:e9b5bef9c9ed5301431f82",
+        "android_client_info": {
+          "package_name": "com.example.doctor_appotmnet.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAp8V1URIoI4tGS_DZuN36fVDX35KmlY1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
