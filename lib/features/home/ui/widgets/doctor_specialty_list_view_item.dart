@@ -6,12 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-class DoctorSpecialtyListViewItem extends StatelessWidget {
-  final SpecializationsData? specializationData;
+class DoctorsSpecialityListViewItem extends StatelessWidget {
+  final SpecializationsData? specializationsData;
   final int itemIndex;
-  const DoctorSpecialtyListViewItem({
+  const DoctorsSpecialityListViewItem({
     super.key,
-    this.specializationData,
+    this.specializationsData,
     required this.itemIndex,
   });
 
@@ -24,10 +24,17 @@ class DoctorSpecialtyListViewItem extends StatelessWidget {
           CircleAvatar(
             radius: 28,
             backgroundColor: ColorsManager.lightBlue,
-            child: SvgPicture.asset('assets/svg/general_speciality.svg'),
+            child: SvgPicture.asset(
+              'assets/svgs/general_speciality.svg',
+              height: 40.h,
+              width: 40.w,
+            ),
           ),
           verticalSpace(8),
-          Text('Speciztion', style: TextStyles.font12BlueRegular),
+          Text(
+            specializationsData?.name ?? 'Specialization',
+            style: TextStyles.font12DarkBlueRegular,
+          ),
         ],
       ),
     );

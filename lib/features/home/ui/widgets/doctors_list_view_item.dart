@@ -12,41 +12,36 @@ class DoctorsListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(bottom: 16.h),
-
       child: Row(
         children: [
-          Container(
-            margin: EdgeInsets.only(bottom: 16.h),
-            child: Row(
+          ClipRRect(
+            borderRadius: BorderRadius.circular(12.0),
+            child: Image.network(
+              width: 110.w,
+              height: 120.h,
+              'https://static.wikia.nocookie.net/five-world-war/images/6/64/Hisoka.jpg/revision/latest?cb=20190313114050',
+              fit: BoxFit.cover,
+            ),
+          ),
+          horizontalSpace(16),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
-                  child: Image.network(
-                    "https://static.wikia.nocookie.net/five-world-war/images/6/64/Hisoka.jpg/revision/latest?cb=20190313114050",
-                    width: 110.w,
-                    height: 120.h,
-                    fit: BoxFit.cover,
-                  ),
+                Text(
+                  doctorsModel?.name ?? 'Name',
+                  style: TextStyles.font18DarkBlueBold,
+                  overflow: TextOverflow.ellipsis,
                 ),
-                horizontalSpace(16),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      doctorsModel?.name ?? "Name",
-                      style: TextStyles.font18DarkBlueBold,
-                    ),
-                    verticalSpace(5),
-                    Text(
-                      '${doctorsModel?.degree} | ${doctorsModel?.phone}',
-                      style: TextStyles.font12GrayMedium,
-                    ),
-                    verticalSpace(5),
-                    Text(
-                      doctorsModel?.email ?? "Email",
-                      style: TextStyles.font12GrayMedium,
-                    ),
-                  ],
+                verticalSpace(5),
+                Text(
+                  '${doctorsModel?.degree} | ${doctorsModel?.phone}',
+                  style: TextStyles.font12GrayMedium,
+                ),
+                verticalSpace(5),
+                Text(
+                  doctorsModel?.email ?? 'Email',
+                  style: TextStyles.font12GrayMedium,
                 ),
               ],
             ),
@@ -54,6 +49,5 @@ class DoctorsListViewItem extends StatelessWidget {
         ],
       ),
     );
-    ;
   }
 }

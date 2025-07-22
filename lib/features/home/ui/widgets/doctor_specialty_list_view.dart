@@ -3,11 +3,11 @@ import 'package:doctor_appotmnet/features/home/ui/widgets/doctor_specialty_list_
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class DoctorSpecialtyListView extends StatelessWidget {
-  final List<SpecializationsData?> specializationsDataList;
-  const DoctorSpecialtyListView({
+class DoctorsSpecialityListView extends StatelessWidget {
+  final List<SpecializationsData?> specializationDataList;
+  const DoctorsSpecialityListView({
     super.key,
-    required this.specializationsDataList,
+    required this.specializationDataList,
   });
 
   @override
@@ -16,11 +16,11 @@ class DoctorSpecialtyListView extends StatelessWidget {
       height: 100.h,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: specializationsDataList.length,
+        itemCount: specializationDataList.length,
         itemBuilder: (context, index) {
-          return DoctorSpecialtyListViewItem(
+          return DoctorsSpecialityListViewItem(
+            specializationsData: specializationDataList[index],
             itemIndex: index,
-            specializationData: specializationsDataList[index],
           );
         },
       ),

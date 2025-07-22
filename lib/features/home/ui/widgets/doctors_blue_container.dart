@@ -1,5 +1,4 @@
 import 'package:doctor_appotmnet/core/helper/spacing.dart';
-import 'package:doctor_appotmnet/core/utils/const/app_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -21,8 +20,8 @@ class DoctorsBlueContainer extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(24.0),
-              image: DecorationImage(
-                image: AssetImage(AppAssets.blueContaner),
+              image: const DecorationImage(
+                image: AssetImage('assets/images/home_blue_pattern.png'),
                 fit: BoxFit.cover,
               ),
             ),

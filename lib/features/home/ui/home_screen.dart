@@ -2,10 +2,10 @@ import 'package:doctor_appotmnet/core/helper/spacing.dart';
 import 'package:doctor_appotmnet/features/home/data/models/specializations_response_model.dart';
 import 'package:doctor_appotmnet/features/home/ui/widgets/doctors_blue_container.dart';
 import 'package:doctor_appotmnet/features/home/ui/widgets/doctors_speciality_see_all.dart';
-import 'package:doctor_appotmnet/features/home/ui/widgets/doctros_bloc_builder.dart';
 import 'package:doctor_appotmnet/features/home/ui/widgets/home_top_bar.dart';
-import 'package:doctor_appotmnet/features/home/ui/widgets/specializations_bloc_builder.dart';
+import 'package:doctor_appotmnet/features/home/ui/widgets/specializations_and_doctors_bloc_builder.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeScreen extends StatelessWidget {
   final SpecializationsResponseModel? specializationsResponseModel;
@@ -25,14 +25,10 @@ class HomeScreen extends StatelessWidget {
             children: [
               const HomeTopBar(),
               const DoctorsBlueContainer(),
-              verticalSpace(24),
+              verticalSpace(24.h),
               const DoctorsSpecialitySeeAll(),
               verticalSpace(18),
-              const SpecializationsBlocBuilder(),
-              verticalSpace(8),
-              const DoctorsBlocBuilder(),
-              // verticalSpace(18),
-              // const (),  /
+              SpecializationsAndDoctorsBlocBuilder(),
             ],
           ),
         ),
