@@ -113,6 +113,7 @@ class AppStrings {
   static const String tearmsAndConditions = ' Terms & Conditions';
   static const String privacyPolicy = ' Privacy Policy';
   static const String and = ' and';
+  static const String or = ' or';
 
   static RegExp emailRegex = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
 }
