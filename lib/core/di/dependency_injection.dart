@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:doctor_appotmnet/core/networking/api_service.dart';
 import 'package:doctor_appotmnet/core/networking/dio_factory.dart';
+import 'package:doctor_appotmnet/features/home/data/apis/home_api_service.dart';
+import 'package:doctor_appotmnet/features/home/data/repos/home_repo.dart';
 import 'package:doctor_appotmnet/features/login/data/repos/login_repo.dart';
 import 'package:doctor_appotmnet/features/login/logic/cubit/login_cubit.dart';
 import 'package:doctor_appotmnet/features/signup/data/repos/sign_up_repo.dart';
@@ -20,6 +22,11 @@ Future<void> setUpGetIt() async {
   // signup
   getIt.registerLazySingleton<SignupRepo>(() => SignupRepo(getIt()));
   getIt.registerFactory<SignupCubit>(() => SignupCubit(getIt()));
+
+  // home
+  getIt.registerLazySingleton<HomeApiService>(() => HomeApiService((dio)));
+  getIt.registerLazySingleton<HomeRepo>(() => HomeRepo(getIt()));
+  // getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt()));
 }
 
 // registerFactory ت    ستخدم لإنشاء كائن جديد في كل مرة يتم فيها طلبه

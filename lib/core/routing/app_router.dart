@@ -1,5 +1,6 @@
 import 'package:doctor_appotmnet/core/di/dependency_injection.dart';
 import 'package:doctor_appotmnet/core/routing/routes.dart';
+import 'package:doctor_appotmnet/features/home/logic/cubit/home_cubit.dart';
 import 'package:doctor_appotmnet/features/home/ui/home_screen.dart';
 import 'package:doctor_appotmnet/features/login/logic/cubit/login_cubit.dart';
 import 'package:doctor_appotmnet/features/login/ui/login_screen.dart';
@@ -33,7 +34,12 @@ class AppRouter {
           ),
         );
       case Routes.homeScreen:
-        return MaterialPageRoute(builder: (_) => HomeScreen());
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => HomeCubit(getIt()..getSpecialization()),
+            child: HomeScreen(),
+          ),
+        );
 
       default:
         return null;

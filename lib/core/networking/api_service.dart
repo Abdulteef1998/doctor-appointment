@@ -9,11 +9,11 @@ import 'package:retrofit/http.dart';
 
 part 'api_service.g.dart';
 
-@RestApi(baseUrl: ApiConstant.apiBaseUrl)
+@RestApi(baseUrl: ApiConstants.apiBaseUrl)
 abstract class ApiService {
   factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
-  @POST(ApiConstant.login)
+  @POST(ApiConstants.login)
   Future<LoginResponse> logIn(@Body() LoginRequsetBody loginRequsetBody);
-  @POST(ApiConstant.signup)
+  @POST(ApiConstants.signup)
   Future<SignupResponse> signUp(@Body() SignupRequestBody signupRequestBody);
 }

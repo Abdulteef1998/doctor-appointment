@@ -2,7 +2,6 @@ import 'package:doctor_appotmnet/core/helper/extensions.dart';
 import 'package:doctor_appotmnet/core/routing/routes.dart';
 import 'package:doctor_appotmnet/core/theming/colors.dart';
 import 'package:doctor_appotmnet/core/theming/styles.dart';
-import 'package:doctor_appotmnet/core/utils/const/app_string.dart';
 import 'package:doctor_appotmnet/features/signup/logic/sign_up_cubit.dart';
 import 'package:doctor_appotmnet/features/signup/logic/sign_up_state.dart';
 import 'package:flutter/material.dart';
@@ -46,11 +45,11 @@ class SignupBlocListener extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text(AppStrings.signupSuccessfully),
+          title: const Text('Signup Successful'),
           content: const SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                Text(AppStrings.congratulationssignupSuccessfully),
+                Text('Congratulations, you have signed up successfully!'),
               ],
             ),
           ),
@@ -64,7 +63,7 @@ class SignupBlocListener extends StatelessWidget {
               onPressed: () {
                 context.pushNamed(Routes.loginScreen);
               },
-              child: const Text(AppStrings.continueText),
+              child: const Text('Continue'),
             ),
           ],
         );
