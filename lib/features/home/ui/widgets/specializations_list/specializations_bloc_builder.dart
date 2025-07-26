@@ -1,13 +1,14 @@
 import 'package:doctor_appotmnet/core/helper/spacing.dart';
 import 'package:doctor_appotmnet/features/home/logic/cubit/home_cubit.dart';
 import 'package:doctor_appotmnet/features/home/logic/cubit/home_state.dart';
-import 'package:doctor_appotmnet/features/home/ui/widgets/doctor_specialty_list_view.dart';
-import 'package:doctor_appotmnet/features/home/ui/widgets/doctors_list_view.dart';
+import 'package:doctor_appotmnet/features/home/ui/widgets/doctors_list/doctors_shimmer_loading.dart';
+import 'package:doctor_appotmnet/features/home/ui/widgets/specializations_list/speciality_shimmer_loading.dart';
+import 'package:doctor_appotmnet/features/home/ui/widgets/specializations_list/specialty_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class SpecializationsAndDoctorsBlocBuilder extends StatelessWidget {
-  const SpecializationsAndDoctorsBlocBuilder({super.key});
+class SpecializationsBlocBuilder extends StatelessWidget {
+  const SpecializationsBlocBuilder({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +22,8 @@ class SpecializationsAndDoctorsBlocBuilder extends StatelessWidget {
           specializationsLoading: () {
             return setupLoading();
           },
-          specializationsSuccess: (specializationsResponseModel) {
-            var specializationsList =
-                specializationsResponseModel.specializationDataList;
+          specializationsSuccess: (specializationDataList) {
+            var specializationsList = specializationDataList;
             return setupSuccess(specializationsList);
           },
           specializationsError: (errorHandler) => setupError(),
@@ -35,24 +35,22 @@ class SpecializationsAndDoctorsBlocBuilder extends StatelessWidget {
     );
   }
 
+  /// shimmer loading for specializations and doctors
   Widget setupLoading() {
-    return const SizedBox(
-      height: 100,
-      child: Center(child: CircularProgressIndicator()),
+    return Expanded(
+      child: Column(
+        children: [
+          const SpecialityShimmerLoading(),
+          verticalSpace(8),
+          const DoctorsShimmerLoading(),
+        ],
+      ),
     );
   }
 
   Widget setupSuccess(specializationsList) {
-    return Expanded(
-      child: Column(
-        children: [
-          DoctorsSpecialityListView(
-            specializationDataList: specializationsList ?? [],
-          ),
-          verticalSpace(8),
-          DoctorsListView(doctorsList: specializationsList?[0]?.doctorsList),
-        ],
-      ),
+    return SpecialityListView(
+      specializationDataList: specializationsList ?? [],
     );
   }
 
